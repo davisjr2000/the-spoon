@@ -1,0 +1,9 @@
+<h1>Welcome to the Spoon!</h1>
+<p>Some suggestions:</p>
+<% @restaurants.each do |restaurant| %>
+  <div>
+    <%= link_to restaurant.name, restaurant_path(restaurant) %>
+    <%= "*" * restaurant.rating %>
+  </div>
+<% end %>
+<%= link_to "Add a restaurant!", restaurants_new_path %>
